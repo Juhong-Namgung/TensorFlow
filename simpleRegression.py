@@ -27,7 +27,8 @@ W = tf.Variable(tf.random_normal([features, 1],dtype='float'), name='weight')
 b = tf.Variable(tf.random_normal([1],dtype='float'), name='bias')
 
 # Construct a linear model
-hypothesis = tf.matmul(X, W, name='h') + b
+#hypothesis = tf.matmul(X, W, name='h') + b
+hypothesis = tf.matmul(X, W, name='hypothesis') + b
 h = tf.identity(hypothesis, name='h')
 
 # Mean squared error
